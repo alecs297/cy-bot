@@ -60,7 +60,7 @@ async function updateTimetables() {
     settings.classes.forEach(async(a, i) => {
         let channel = await client.channels.fetch(a.channel);
         let embed = {
-            description: `${a.name} - Semaine ${moment().weekYear()}`,
+            description: `${a.name} - Semaine ${moment().week() - 1}`,
             image: {
                 url: settings.url.replace(/{}/g, a.name) + "?nocache=" + moment().toISOString()
             }
