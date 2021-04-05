@@ -81,7 +81,7 @@ async function updateTimetables() {
         }
     });
     updateStatus();
-    setTimeout(updateTimetables, 10000);
+    setTimeout(updateTimetables, 600000);
 }
 
 client.on("ready", async() => {
