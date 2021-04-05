@@ -110,7 +110,7 @@ client.on("message", async(message) => {
                         if (channel) {
                             message.channel.send({
                                 embed: {
-                                    description: `Si la classe fournie existe, une mise à jour sera publiée toutes les heures.`
+                                    description: `Si la classe fournie existe, une mise à jour sera publiée toutes les 10 minutes.`
                                 }
                             });
                             addListener(channel.id, args[1]);
