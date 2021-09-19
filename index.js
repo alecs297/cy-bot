@@ -70,7 +70,7 @@ async function updateTimetables() {
             try {
                 msg = await channel.messages.fetch(a.message);
             } catch (error) {
-                msg = new Discord.MessageEmbed()
+                msg = new Discord.MessageEmbed().setDescription("Votre emploi du temps sera affiché ici toutes les 10 minutes")
                 await channel.send(msg).then(m => {
                     settings.classes[i].message = m.id;
                     msg = m;
